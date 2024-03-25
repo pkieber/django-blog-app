@@ -11,6 +11,13 @@ class Index(ListView):
     paginate_by = 1
 
 
+class Featured(ListView):
+    model = Article
+    queryset = Article.objects.filter(featured=True).order_by("-date")
+    template_name = "blog/featured.html"
+    paginate_by = 1
+
+
 class DetailArticleView(DetailView):
     model = Article
     template_name = "blog/blog_post.html"
@@ -31,6 +38,7 @@ class LikeArticle(View):
             article.likes.remove(request.user.id)
         else:
             article.likes.add(request.user.id)
-            
         article.save()
         return redirect("detail_article", pk)
+    
+
