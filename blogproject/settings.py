@@ -130,6 +130,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # LOGIN URL - Added
 LOGIN_REDIRECT_URL = "index"
+LOGIN_URL = "login"
 
 
 # CRISPY FORMS - Added

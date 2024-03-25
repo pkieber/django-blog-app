@@ -14,6 +14,5 @@ class RegisterView(View):
         if form.is_valid():
             form.save()
             return redirect("index") # redirect to index page
-        else:
-            # Form is not valid, re-render the registration form with errors
-            return render(request, "users/register.html", {"form": form})
+        #else:
+            #return render(request, "users/register.html", {"form": form})
