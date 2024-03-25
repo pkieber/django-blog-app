@@ -31,10 +31,11 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "blog",
-    "users",
-    "crispy_forms",
-    "crispy_bootstrap5",
+    "blog", # Added the blog app
+    "users", # Added the users app
+    "crispy_forms", # Added crispy_forms
+    "crispy_bootstrap5", # Added crispy_bootstrap5
+    "tinymce", # Added tinymce
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -116,6 +117,7 @@ USE_TZ = True
 STATIC_URL = "static/"
 
 
+# Static files (CSS, JavaScript, Images) - Added
 STATICFILES_DIRS = [
     BASE_DIR / "blog" / "static",
 ]
@@ -126,11 +128,11 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-# LOGIN URL
+# LOGIN URL - Added
 LOGIN_REDIRECT_URL = "index"
 
 
-# CRISPY FORMS
+# CRISPY FORMS - Added
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
